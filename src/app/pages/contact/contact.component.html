@@ -1,0 +1,93 @@
+<div class="contact-page">
+    <div class="section-container">
+
+        <div class="page-header">
+            <div class="section-label">Get In Touch</div>
+            <h1 class="section-title">Contact Me</h1>
+            <p class="section-sub">
+                I'm actively looking for frontend engineering roles.
+                Drop me a message and I'll respond within 24 hours.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- Info Panel -->
+            <div class="contact-info">
+                <h3>Let's talk</h3>
+                <p>Whether it's a full-time role, freelance project, or just a conversation — I'm open to it all.</p>
+
+                <div class="info-list">
+                    <div *ngFor="let item of contactInfo" class="info-item">
+                        <span class="info-icon">{{ item.icon }}</span>
+                        <div>
+                            <div class="info-label">{{ item.label }}</div>
+                            <div class="info-value">{{ item.value }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="availability-badge">
+                    <span class="badge-dot"></span>
+                    Available for immediate joining
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-wrapper">
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contact-form" novalidate>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input id="name" name="name" type="text" placeholder="John Doe" [(ngModel)]="formData.name"
+                                required #nameField="ngModel" [class.error]="nameField.invalid && nameField.touched">
+                            <span class="field-error" *ngIf="nameField.invalid && nameField.touched">
+                                Name is required
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input id="email" name="email" type="email" placeholder="john@company.com"
+                                [(ngModel)]="formData.email" required email #emailField="ngModel"
+                                [class.error]="emailField.invalid && emailField.touched">
+                            <span class="field-error" *ngIf="emailField.invalid && emailField.touched">
+                                Valid email is required
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="Frontend Engineer Role at..."
+                            [(ngModel)]="formData.subject" required #subjectField="ngModel"
+                            [class.error]="subjectField.invalid && subjectField.touched">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me about the role or project..." [(ngModel)]="formData.message" required
+                            #messageField="ngModel" [class.error]="messageField.invalid && messageField.touched">
+            </textarea>
+                    </div>
+
+                    <!-- Success / Error feedback -->
+                    <div class="form-feedback success" *ngIf="submitStatus === 'success'">
+                        ✅ Message sent! I'll get back to you within 24 hours.
+                    </div>
+                    <div class="form-feedback error-msg" *ngIf="submitStatus === 'error'">
+                        ❌ Something went wrong. Please email me directly at anoopsingh635&#64;gmail.com
+                    </div>
+
+                    <button type="submit" class="submit-btn" [disabled]="isSubmitting">
+                        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

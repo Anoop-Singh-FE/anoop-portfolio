@@ -1,0 +1,139 @@
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-bg">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-tag">👋 Available for new opportunities</div>
+        <h1 class="hero-name">Anoop Singh</h1>
+        <h2 class="hero-role">
+            <span class="typewriter">{{ displayText }}</span>
+            <span class="cursor">|</span>
+        </h2>
+        <p class="hero-desc">
+            5.5+ years building scalable enterprise Angular applications for
+            banking, fintech and SaaS platforms. Deep expertise in Angular,
+            TypeScript and RxJS.
+        </p>
+        <div class="hero-actions">
+            <a routerLink="/projects" class="btn-primary">View My Work</a>
+            <a routerLink="/contact" class="btn-secondary">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num">5.5+</span>
+                <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Companies</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="section-container">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <span>AS</span>
+                </div>
+                <div class="image-badge">
+                    <span class="badge-dot"></span>
+                    Available now
+                </div>
+            </div>
+            <div class="about-text">
+                <div class="section-label">About Me</div>
+                <h2 class="section-title">Turning complex problems into elegant interfaces</h2>
+                <p>
+                    I'm a Senior Frontend Engineer based in Bangalore with 5.5+ years of experience
+                    delivering high-performance Angular applications for enterprise clients including
+                    Standard Chartered Bank.
+                </p>
+                <p>
+                    My focus is on writing clean, maintainable code — leveraging TypeScript strict
+                    typing, RxJS reactive patterns, and Angular best practices to build products
+                    that scale reliably.
+                </p>
+                <p>
+                    I graduated from NTT NITK Surathkal and have worked across banking, fintech,
+                    GST compliance, insurance, and loyalty platforms.
+                </p>
+                <div class="about-actions">
+                    <a routerLink="/resume" class="btn-primary">View Resume</a>
+                    <a routerLink="/contact" class="btn-ghost">Say Hello</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills-section">
+    <div class="section-container">
+        <div class="section-label">Technical Skills</div>
+        <h2 class="section-title">My Tech Stack</h2>
+        <p class="section-sub">Technologies I work with daily to build production-grade applications.</p>
+
+        <div class="skills-grid">
+            <div *ngFor="let skill of skills" class="skill-tag" [style.--skill-color]="skill.color">
+                <span class="skill-dot" [style.background]="skill.color"></span>
+                {{ skill.name }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section class="experience-section">
+    <div class="section-container">
+        <div class="section-label">Work History</div>
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline">
+            <div *ngFor="let exp of experiences; let i = index" class="exp-card">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">{{ exp.role }}</h3>
+                            <div class="exp-company">
+                                {{ exp.company }}
+                                <span *ngIf="exp.client" class="exp-client">· {{ exp.client }}</span>
+                            </div>
+                        </div>
+                        <span class="exp-period">{{ exp.period }}</span>
+                    </div>
+                    <ul class="exp-points">
+                        <li *ngFor="let point of exp.points">{{ point }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-section">
+    <div class="section-container">
+        <div class="cta-box">
+            <div class="cta-glow"></div>
+            <h2>Let's build something great together</h2>
+            <p>I'm actively looking for frontend engineering roles. Let's talk.</p>
+            <div class="cta-actions">
+                <a routerLink="/contact" class="btn-primary">Get In Touch</a>
+                <a routerLink="/projects" class="btn-ghost">See My Work</a>
+            </div>
+        </div>
+    </div>
+</section>

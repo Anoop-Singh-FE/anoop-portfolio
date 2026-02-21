@@ -1,0 +1,21 @@
+<div class="resume-page">
+    <div class="section-container">
+
+        <div class="page-header">
+            <div class="section-label">My Resume</div>
+            <h1 class="section-title">Resume</h1>
+            <p class="section-sub">
+                5.5+ years of Angular expertise. Download or view inline below.
+            </p>
+            <button class="btn-primary" (click)="downloadResume()">
+                ↓ Download PDF
+            </button>
+        </div>
+
+        <div class="pdf-wrapper">
+            <iframe [src]="safeResumeUrl" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+</div>

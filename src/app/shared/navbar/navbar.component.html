@@ -1,0 +1,41 @@
+<nav [class.scrolled]="isScrolled()">
+    <div class="nav-container">
+
+        <a routerLink="/" class="logo" (click)="closeMenu()">
+            <span class="logo-bracket">{{ openBracket }}</span>
+            Anoop
+            <span class="logo-bracket">{{ closeBracket }}</span>
+        </a>
+
+        <ul class="nav-links">
+            <li *ngFor="let link of navLinks">
+                <a [routerLink]="link.path" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: link.path === '/'}">
+                    {{ link.label }}
+                </a>
+            </li>
+        </ul>
+
+        <a routerLink="/contact" class="cta-btn" (click)="closeMenu()">
+            Hire Me
+        </a>
+
+        <button class="hamburger" (click)="toggleMenu()" [class.open]="isMobileMenuOpen()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <div class="mobile-menu" *ngIf="isMobileMenuOpen()">
+        <a *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: link.path === '/'}" (click)="closeMenu()">
+            {{ link.label }}
+        </a>
+        <a routerLink="/contact" class="cta-btn mobile-cta" (click)="closeMenu()">
+            Hire Me
+        </a>
+    </div>
+
+</nav>

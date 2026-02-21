@@ -1,0 +1,118 @@
+.resume-page {
+  padding-top: 80px;
+}
+
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px 100px;
+}
+
+.section-label {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6c8eff;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.page-header {
+  margin-bottom: 48px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #6c8eff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    background: #557aff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108,142,255,0.35);
+  }
+}
+
+.pdf-wrapper {
+  width: 100%;
+  min-height: 600px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+
+  iframe {
+    width: 100%;
+    height: 800px;
+    display: block;
+  }
+}
+
+.pdf-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  text-align: center;
+  padding: 48px;
+  gap: 16px;
+
+  .placeholder-icon {
+    font-size: 56px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  code {
+    background: rgba(108,142,255,0.1);
+    border: 1px solid rgba(108,142,255,0.2);
+    color: #6c8eff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  .hint {
+    font-size: 13px;
+    color: #334155;
+    margin-top: 8px;
+  }
+}
