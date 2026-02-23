@@ -64,6 +64,16 @@ export class ProjectsComponent {
       featured: false,
       status: 'completed',
     },
+    {
+      title: 'GitHub Profile Explorer',
+      description:
+        'Search any GitHub user and explore their repositories, language distribution and stats. Built with a unique editorial design — warm cream palette, Playfair Display serif headers, IBM Plex Mono data typography.',
+      tags: ['Angular', 'TypeScript', 'GitHub API', 'RxJS', 'SCSS'],
+      github: 'https://github.com/Anoop-Singh-FE/github-explorer',
+      live: 'https://github-library.netlify.app/',
+      featured: true,
+      status: 'completed' as const,
+    },
   ];
 
   get filteredProjects(): Project[] {
