@@ -51,7 +51,7 @@ export class ProjectsComponent {
       tags: ['Angular', 'TypeScript', 'Node.js', 'REST API'],
       github: '#',
       live: '#',
-      featured: false,
+      featured: true,
       status: 'completed',
     },
     {
@@ -60,7 +60,7 @@ export class ProjectsComponent {
         'This portfolio — built with Angular 17+, standalone components, signals, GSAP animations and TailwindCSS. Deployed on Netlify with CI/CD.',
       tags: ['Angular', 'TypeScript', 'GSAP', 'TailwindCSS', 'SCSS'],
       github: 'https://github.com/Anoop-Singh-FE/anoop-portfolio',
-      live: '#',
+      live: 'https://anoopsingh-portfolio.netlify.app/',
       featured: false,
       status: 'completed',
     },
@@ -71,7 +71,7 @@ export class ProjectsComponent {
       tags: ['Angular', 'TypeScript', 'GitHub API', 'RxJS', 'SCSS'],
       github: 'https://github.com/Anoop-Singh-FE/github-explorer',
       live: 'https://github-library.netlify.app/',
-      featured: true,
+      featured: false,
       status: 'completed' as const,
     },
   ];
